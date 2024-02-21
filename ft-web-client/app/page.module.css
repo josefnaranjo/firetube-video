@@ -1,4 +1,15 @@
-.thumbnail {
-    margin: 10px;
-  }
-  
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnailContainer {
+  margin: 10px;
+  width: 120px; /* Set a fixed width for the thumbnails */
+}
+
+.thumbnailContainer img {
+  width: 100%;
+  height: auto;
+}

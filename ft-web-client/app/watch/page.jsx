@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from "react"
+import styles from "./page.module.css"
 
 const Watch = () => {
     const videoPrefix = 'https://storage.googleapis.com/ft-processed-videos/';
@@ -10,7 +11,9 @@ const Watch = () => {
     return (
         <div>
             <h1>Watch Page</h1>
-            { <video controls src={videoPrefix + videoSrc} /> }
+            <div className={styles.videoContainer}>
+                <video controls src={videoPrefix + videoSrc} />
+            </div>
         </div>
     );
 }

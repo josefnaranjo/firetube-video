@@ -7,12 +7,13 @@ export default async function Home() {
   const videos = await getVideos();
 
   return (
-    <main>
+    <main className={styles.container}>
       {
         videos.map((video) => (
           <Link href={`/watch?v=${video.filename}`} key={video.id}>
-            <Image src={'/thumbnail.png'} alt='video' width={120} height={80}
-              className={styles.thumbnail} />
+            <div className={styles.thumbnailContainer}>
+              <Image src={'/thumbnail.png'} alt='video' layout="responsive" width={120} height={80} />
+            </div>
           </Link>
         ))
       }
